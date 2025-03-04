@@ -1,0 +1,14 @@
+{
+  "files": {
+    "main.css": "/sccv/static/css/main.31d6cfe0.css",
+    "main.js": "/sccv/static/js/main.31552240.js",
+    "static/js/787.25eaef86.chunk.js": "/sccv/static/js/787.25eaef86.chunk.js",
+    "index.html": "/sccv/index.html",
+    "main.31552240.js.map": "/sccv/static/js/main.31552240.js.map",
+    "787.25eaef86.chunk.js.map": "/sccv/static/js/787.25eaef86.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.31d6cfe0.css",
+    "static/js/main.31552240.js"
+  ]
+}
