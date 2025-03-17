@@ -51,6 +51,7 @@ const Name = styled.h2`
 	letter-spacing: 2.5px;
 
 	margin: 10px 0;
+	display: inline-block;
 
 	span {
 		position: relative;
