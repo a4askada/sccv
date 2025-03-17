@@ -3,17 +3,21 @@ import styled from "styled-components";
 import {SectionTitle} from "../../../components/SectionTitle";
 import {FlexWrapper} from "../../../components/FlexWrapper";
 import {Button} from "../../../components/Button";
+import {Container} from "../../../components/Container";
+import {theme} from "../../../styles/Theme";
 
 export const Contacts = () => {
 	return (
 		<StyledContact>
-			<SectionTitle>Contact</SectionTitle>
-			<StyledForm>
-				<Field placeholder="Name" />
-				<Field placeholder="Subject" />
-				<Field as="textarea" placeholder="Message" />
-				<Button type="submit">Send message</Button>
-			</StyledForm>
+			<Container>
+				<SectionTitle>Contact</SectionTitle>
+				<StyledForm>
+					<Field placeholder="Name" />
+					<Field placeholder="Subject" />
+					<Field as="textarea" placeholder="Message" />
+					<Button type="submit">Send message</Button>
+				</StyledForm>
+			</Container>
 		</StyledContact>
 	);
 };
@@ -29,6 +33,32 @@ const StyledForm = styled.form`
 	width: 100%;
 	display: flex;
 	flex-direction: column;
-	gap: 10px;
+	gap: 16px;
+	align-items: center;
+
+	textarea {
+		resize: none;
+		height: 155px;
+	}
 `;
-const Field = styled.input``;
+const Field = styled.input`
+	width: 100%;
+	border: 1px solid ${theme.colors.borderColor};
+	background-color: ${theme.colors.secondaryBg};
+	padding: 7px 15px;
+	color: ${theme.colors.font};
+
+	font-family: "Poppins", sans-serif;
+	font-size: 12px;
+
+	font-weight: 400;
+
+	letter-spacing: 0.6px;
+
+	outline: none;
+
+	&::placeholder {
+		color: ${theme.colors.placeholderColor};
+		text-transform: capitalize;
+	}
+`;
