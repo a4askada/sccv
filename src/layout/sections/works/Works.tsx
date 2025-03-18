@@ -19,7 +19,7 @@ export const Works = () => {
 			<Container>
 				<SectionTitle>My Works</SectionTitle>
 				<TabMenu menuItems={worksItems} />
-				<FlexWrapper justify="space-between" align="">
+				<FlexWrapper justify="space-between" align=" " wrap="wrap">
 					<Work
 						src={socialImg}
 						title="Social Network"
@@ -38,4 +38,8 @@ export const Works = () => {
 
 const StyledWorks = styled.section`
 	min-height: 100vh;
+
+	${FlexWrapper} {
+		gap: 30px;
+	}
 `;

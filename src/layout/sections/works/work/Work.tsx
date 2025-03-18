@@ -29,14 +29,19 @@ export const Work = (props: WorkPropsType) => {
 
 const StyledWork = styled.div`
 	background-color: ${theme.colors.secondaryBg};
-	max-width: 540px;
-	width: 100%;
+
+	width: 330px;
+	flex-grow: 1;
 
 	${Link} {
 		padding: 10px 2px;
 		& + ${Link} {
 			margin-left: 20px;
 		}
+	}
+
+	@media ${theme.media.desktop} {
+		max-width: 540px;
 	}
 `;
 const ImageWrapper = styled.div`
@@ -55,20 +60,38 @@ const ImageWrapper = styled.div`
 		}
 	}
 
+	&::before {
+		content: "";
+		position: absolute;
+		right: 0;
+		left: 0;
+		top: 0;
+		bottom: 0;
+		background: rgba(0, 0, 0, 0.3);
+		backdrop-filter: blur(4px);
+		opacity: 0;
+	}
+
+	&:hover {
+		&::before {
+			opacity: 1;
+		}
+	}
+
 	&:hover {
 		${Button} {
 			opacity: 1;
 		}
+	}
+
+	@media ${theme.media.tablet} {
 		&::before {
-			content: "";
-			position: absolute;
-			right: 0;
-			left: 0;
-			top: 0;
-			bottom: 0;
-			background: rgba(0, 0, 0, 0.3);
-			backdrop-filter: blur(4px);
+			opacity: 1;
 		}
+	}
+
+	${Button} {
+		opacity: 1;
 	}
 `;
 

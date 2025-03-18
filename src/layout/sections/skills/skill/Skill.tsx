@@ -1,6 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import {Icon} from "../../../../components/icon/Icon";
+import {theme} from "../../../../styles/Theme";
 
 type SkillPropsType = {
 	iconId: string;
@@ -39,9 +40,14 @@ export const IconWrapper = styled.div`
 	}
 `;
 const StyledSkill = styled.div`
-	width: 380px;
+	width: 340px;
+	flex-grow: 1;
 	padding: 62px 20px 40px;
 	text-align: center;
+
+	@media ${theme.media.mobile} {
+		padding: 62px 0px 40px;
+	}
 `;
 const SkillTitle = styled.h3`
 	font-family: "Josefin Sans";

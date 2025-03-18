@@ -3,15 +3,16 @@ import React from "react";
 import photo from "../../../assets/images/sveta.webp";
 import styled from "styled-components";
 import {FlexWrapper} from "../../../components/FlexWrapper";
-import photo2 from "../../../assets/images/q.png";
+
 import {Container} from "../../../components/Container";
 import {theme} from "../../../styles/Theme";
+import {font} from "../../../styles/Common";
 
 export const Main = () => {
 	return (
 		<StyledMain>
 			<Container>
-				<FlexWrapper align="center" justify="space-between">
+				<FlexWrapper align="center" justify="space-around" wrap="wrap">
 					<div>
 						<SmallText>Hi There</SmallText>
 
@@ -39,15 +40,20 @@ const Photo = styled.img`
 	width: 350px;
 	height: 430px;
 	object-fit: cover;
+
+	margin-right: 17px;
+
+	@media ${theme.media.mobile} {
+		width: 310px;
+		height: 380px;
+	}
 `;
 const MainTitle = styled.h1`
-	font-size: 27px;
-	font-weight: 400;
+	${font({weight: 400, Fmax: 24, Fmin: 20})}
 `;
 const Name = styled.h2`
-	font-family: "Josefin Sans";
-	font-size: 50px;
-	font-weight: 700;
+	${font({family: '"Josefin Sans",sans-serif', weight: 700, Fmax: 50, Fmin: 36})}
+
 	letter-spacing: 2.5px;
 
 	margin: 10px 0;
@@ -56,6 +62,7 @@ const Name = styled.h2`
 	span {
 		position: relative;
 		z-index: 1;
+		white-space: nowrap;
 
 		::before {
 			content: "";
@@ -69,8 +76,13 @@ const Name = styled.h2`
 			z-index: -1;
 		}
 	}
+
+	@media ${theme.media.mobile} {
+		margin: 15px 0 22px;
+	}
 `;
 const SmallText = styled.span`
+	display: block;
 	font-size: 14px;
 	font-weight: 400;
 `;
@@ -78,6 +90,10 @@ const SmallText = styled.span`
 const PhotoWrapper = styled.div`
 	position: relative;
 	z-index: 1;
+
+	@media ${theme.media.mobile} {
+		margin-top: 65px;
+	}
 
 	&::before {
 		content: "";
@@ -91,5 +107,12 @@ const PhotoWrapper = styled.div`
 		left: 24px;
 
 		z-index: -1;
+
+		@media ${theme.media.mobile} {
+			height: 414px;
+			width: 314px;
+			top: -17px;
+			left: 20px;
+		}
 	}
 `;
