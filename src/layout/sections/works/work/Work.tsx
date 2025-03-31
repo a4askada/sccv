@@ -9,7 +9,7 @@ type WorkPropsType = {
 	src: string;
 };
 
-export const Work = (props: WorkPropsType) => {
+export const Work: React.FC<WorkPropsType> = (props: WorkPropsType) => {
 	return (
 		<StyledWork>
 			<ImageWrapper>

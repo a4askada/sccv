@@ -47,14 +47,10 @@ const Field = styled.input`
 	background-color: ${theme.colors.secondaryBg};
 	padding: 7px 15px;
 	color: ${theme.colors.font};
-
 	font-family: "Poppins", sans-serif;
 	font-size: 12px;
-
 	font-weight: 400;
-
 	letter-spacing: 0.6px;
-
 	outline: none;
 
 	&::placeholder {
